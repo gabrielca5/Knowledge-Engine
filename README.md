@@ -83,7 +83,7 @@ Rate = 8.2
 
 ---
 
-# Pergunta 1: Qual é a média de notas por Saga/Arco?
+# ➡ Pergunta 1: Qual é a média de notas por Saga/Arco?
 ## Query 3 - Média de notas por saga ( Pergunta Sofisticada ) 
 
 ```prolog
@@ -101,7 +101,7 @@ List = ['s1 Kazekage Rescue'-7.9875, 's10 The Gathering of the Five Kage'-7.7360
 ---
 
 
-# Pergunta 2: Dentre os episódios com nota acima de oito, quais são os que tiveram um maior número de votos?
+# ➡ Pergunta 2: Dentre os episódios com nota acima de oito, quais são os que tiveram um maior número de votos?
 ## Query 4 - Episódio mais votado entre os com nota > 8 
 
 ```prolog
@@ -123,7 +123,9 @@ Votes = 2780.
 
 ---
 
-# Pergunta 3: Qual Saga teve a maior quantidade de episódios com nota acima de 8?
+# ➡ Pergunta 3: Qual Saga teve a maior quantidade de episódios com nota acima de 8?
+> Obs: Esse resultado pode causar uma interpretação errada dos dados. Nesse caso estamos medindo quantitativamente a quantidade de eps com nota acima de oito, então uma saga de nota regular, mas com muitos episódios facilmente ficaria em primeiro, enquanto uma saga com notas altíssimas, mas curta, poderia ser prejudicada.
+
 ## Query 5 - Saga com mais episódios acima de 8 
 
 ```prolog
@@ -144,7 +146,9 @@ Count = 27.
 * retorna a saga com maior quantidade
 ---
 
-# Pergunta 4: Qual foi a melhor saga em geral? (Média de notas dos episódios e quantidade de eps com nota acima de 8 )  
+# ➡ Pergunta 4: Qual foi a melhor saga em geral? (Média de notas dos episódios e quantidade de eps com nota acima de 8 )  
+> Obs: Aplicando a média, podemos ver de forma mais justa qual é realmente o maior arco, mas, usando a quantidade de eps com nota acima de 8 como cofator para o resultado, novamente podemos enviesar a interpretação.
+
 ## Query 6 - Melhor saga geral 
 
 ```prolog
