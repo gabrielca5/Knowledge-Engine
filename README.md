@@ -49,7 +49,7 @@ swipl
 
 ---
 
-## Query 1 - Episódios com nota maior que 8 ( Pergunta simples ) 
+## Query 1 - Episódios com nota maior que 8 
 
 ```prolog
 ?- high_rated(Title, Rate).
@@ -66,7 +66,7 @@ R = 8.2
 
 ---
 
-## Query 2 - Melhor episódio ( Pergunta simples ) 
+## Query 2 - Melhor episódio 
 
 ```prolog
 ?- best_episode(Title, Rate).
@@ -83,6 +83,7 @@ Rate = 8.2
 
 ---
 
+# Pergunta 1: Qual é a média de notas por Saga/Arco?
 ## Query 3 - Média de notas por saga ( Pergunta Sofisticada ) 
 
 ```prolog
@@ -99,7 +100,9 @@ List = ['s1 Kazekage Rescue'-7.9875, 's10 The Gathering of the Five Kage'-7.7360
 
 ---
 
-## Query 4 - Episódio mais votado entre os com nota > 8 (Sofisticada)
+
+# Pergunta 2: Dentre os episódios com nota acima de oito, quais são os que tiveram um maior número de votos?
+## Query 4 - Episódio mais votado entre os com nota > 8 
 
 ```prolog
 ?- best_high_rated_votes(Title, Votes).
@@ -120,7 +123,8 @@ Votes = 2780.
 
 ---
 
-## Query 5 - Saga com mais episódios acima de 8 (Sofisticada)
+# Pergunta 3: Qual Saga teve a maior quantidade de episódios com nota acima de 8?
+## Query 5 - Saga com mais episódios acima de 8 
 
 ```prolog
 ?- best_saga_high_rated(Saga, Count).
@@ -138,8 +142,10 @@ Count = 27.
 * utiliza um predicado auxiliar (`high_rated_episode`)
 * conta quantos episódios de cada saga têm nota > 8
 * retorna a saga com maior quantidade
+---
 
-## Query 6 - Melhor saga geral (Sofisticada - Final)
+# Pergunta 4: Qual foi a melhor saga em geral? (Média de notas dos episódios e quantidade de eps com nota acima de 8 )  
+## Query 6 - Melhor saga geral 
 
 ```prolog
 ?- best_saga_overall(Saga, Avg, HighCount).
@@ -202,6 +208,7 @@ __Média - Quantidade - Saga__
 | 2  | 2          | The Akatsuki Makes Its Move    | Mixed Canon/Filler   | 2007        | 8    | 575   | s1 Kazekage Rescue    | 2007-02-15 |
 | 3  | 3          | The Results of Training        | Mixed Canon/Filler   | 2007        | 8    | 508   | s1 Kazekage Rescue    | 2007-02-22 |
 | 4  | 4          | The Jinchuriki of the Sand     | Mixed Canon/Filler   | 2007        | 8.2  | 517   | s1 Kazekage Rescue    | 2007-03-01 |
+
 > O dataset original não possui a tabela "ID", e sim uma tabela vazia, podendo ser interpretada como o ID
 
 Formato de cada elemento em Prolog:
